@@ -41,14 +41,20 @@ function renderFavs(list) {
 
   list.forEach((f) => {
     grid.innerHTML += `
-      <div class="fighter-card" data-id="${f.id}">
-       <img src="${f.img}" alt="${f.name}">
-       <div class="fighter-info">
-         <div class="fighter-name">${f.name}</div>
-         <div class="fighter-weight">${f.weight}</div>
-       </div>
-       <button class="delete-btn" data-id="${f.id}" data-name="${f.name}">Delete from favs</button>
-     </div>
+      <div class="fighter-card" 
+           data-id="${f.id}" 
+           data-name="${f.name}">
+        <img src="${f.img}" alt="${f.name}">
+        <div class="fighter-info">
+          <div class="fighter-name">${f.name}</div>
+          <div class="fighter-weight">${f.weight}</div>
+        </div>
+        <button class="delete-btn"
+                data-id="${f.id}"
+                data-name="${f.name}">
+          Delete from favs
+        </button>
+      </div>
     `;
   });
 }
@@ -109,3 +115,16 @@ function slugify(text) {
     .replace(/^-+/, "")
     .replace(/-+$/, "");
 }
+
+document.addEventListener("click", (e) => {
+  const card = e.target.closest(".fighter-card");
+  if (!card) return;
+
+  // If delete button was clicked, ignore card navigation
+  if (e.target.classList.contains("delete-btn")) return;
+
+  const fighterName = card.dataset.name;
+  const slug = slugify(fighterName);
+
+  window.open(`https://www.ufc.com/athlete/${slug}`, "_blank");
+});
