@@ -58,7 +58,9 @@
   gap: 40px;
   padding-right: 40px;
 }
-
+label {
+  font-family: none;
+}
 .nav-link {
   color: white;
   text-decoration: none;
@@ -95,7 +97,12 @@
   margin: 0;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-
+p {
+  font-family: none;
+}
+.lead {
+  font-family: none;
+}
 .hero-overlay {
   padding: 40px;
   color: white;

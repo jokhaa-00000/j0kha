@@ -68,7 +68,6 @@ function render(list) {
         <img src="${f.img}" alt="${f.name}">
         <div class="fighter-info">
           <div class="fighter-name">${f.name}</div>
-          <div class="fighter-age">age: ${f.age}</div>
           <div class="fighter-weight">${f.weight}</div>
         </div>
       </div>
