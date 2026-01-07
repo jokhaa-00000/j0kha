@@ -76,13 +76,23 @@ function render(list) {
 }
 
 /* ================= FILTER ================= */
+function normalize(text) {
+  return text.toLowerCase().trim().replace(/\s+/g, " ");
+}
+
 function filterFighters() {
-  const s = searchInput.value.toLowerCase();
-  const w = weightFilter.value;
+  const search = searchInput.value.toLowerCase().trim();
+  const weight = weightFilter.value;
 
   const filtered = fighters.filter((f) => {
-    const nameMatch = f.name.toLowerCase().includes(s);
-    const weightMatch = w === "all" || f.weight === w;
+    const nameParts = f.name.toLowerCase().split(" ");
+
+    // STARTS WITH logic (not includes)
+    const nameMatch =
+      search === "" || nameParts.some((part) => part.startsWith(search));
+
+    const weightMatch = weight === "all" || f.weight === weight;
+
     return nameMatch && weightMatch;
   });
 
