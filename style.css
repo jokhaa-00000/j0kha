@@ -1030,3 +1030,274 @@ header {
   background-color: #1c2a38;
   width: 100%;
 }
+/* ===== LOGIN / CONTACT (MATCH HEADER & FOOTER) ===== */
+
+.contact-section {
+  background: #f0f4f8; /* same family as footer */
+  padding: 140px 20px 100px; /* space for fixed header */
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 42px;
+  color: #1c2a38;
+  letter-spacing: 2px;
+}
+
+.contact-section .underline {
+  background-color: #edc920; /* header yellow */
+  margin-bottom: 50px;
+}
+
+/* ===== LOGIN CARD ===== */
+.login-section {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 35px 30px 40px;
+  border-radius: 14px;
+  border: 3px solid #1c2a38;
+  box-shadow: 0 10px 30px rgba(28, 42, 56, 0.2);
+  position: relative;
+}
+
+/* inputs */
+.login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 2px solid #1c2a38;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #edc920;
+  box-shadow: 0 0 0 3px rgba(237, 201, 32, 0.3);
+}
+
+/* password eye */
+.eye {
+  position: absolute;
+  right: 45px;
+  top: 155px;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.eye:hover {
+  opacity: 1;
+}
+
+/* button */
+.login-form button {
+  width: 100%;
+  padding: 14px;
+  background: #1c2a38;
+  color: #edc920;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #edc920;
+  color: #1c2a38;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 620px) {
+  .login-form {
+    padding: 30px 22px;
+  }
+
+  .contact-title {
+    font-size: 34px;
+  }
+}
+
+/* ===== PROFILE PAGE ===== */
+
+.profile-section {
+  padding: 160px 20px 100px;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  background: white;
+  border: 3px solid #1c2a38;
+  border-radius: 16px;
+  padding: 40px 35px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(28, 42, 56, 0.25);
+}
+
+.profile-card h2 {
+  font-size: 36px;
+  color: #1c2a38;
+  letter-spacing: 2px;
+}
+
+.profile-info {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.profile-info p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #1c2a38;
+}
+
+.profile-info label {
+  font-size: 16px;
+  color: #1c2a38;
+}
+
+.profile-info input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 15px;
+  border-radius: 8px;
+  border: 2px solid #1c2a38;
+}
+
+.profile-info button {
+  width: 100%;
+  padding: 12px;
+  background: #edc920;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #1c2a38;
+  transition: 0.3s;
+}
+
+.profile-info button:hover {
+  background: #1c2a38;
+  color: #edc920;
+}
+
+/* logout */
+.logout-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: darkred;
+}
+.register-text {
+  margin-top: 18px;
+  font-size: 14px;
+  text-align: center;
+  color: #1c2a38;
+}
+
+.register-text button {
+  background: none;
+  border: none;
+  color: #edc920;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.register-text button:hover {
+  text-decoration: underline;
+}
+
+/* ===== REGISTER PAGE ===== */
+
+.register-section {
+  padding: 160px 20px;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 35px;
+  border-radius: 16px;
+  border: 3px solid #1c2a38;
+  box-shadow: 0 10px 30px rgba(28, 42, 56, 0.25);
+  text-align: center;
+}
+
+.register-card h2 {
+  font-size: 34px;
+  color: #1c2a38;
+  letter-spacing: 2px;
+}
+
+.register-card input,
+.register-card select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid #1c2a38;
+  font-size: 15px;
+}
+
+.register-card input:focus,
+.register-card select:focus {
+  outline: none;
+  border-color: #edc920;
+  box-shadow: 0 0 0 3px rgba(237, 201, 32, 0.3);
+}
+
+/* REGISTER BUTTON — SAME AS LOGIN */
+
+.register-card button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: #1c2a38; /* same as login */
+  color: #edc920;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-card button[type="submit"]:hover {
+  background: #edc920;
+  color: #1c2a38;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>log in</title>
+    <title>profile</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,26 +41,24 @@
         <span class="bar"></span>
       </button>
     </header>
-    <section id="contact" class="contact-section">
-      <h2 class="contact-title">LOG IN</h2>
-      <div class="underline"></div>
-      <!-- aq new ari gng -->
-      <section class="login-section">
-        <form id="loginForm" class="login-form">
-          <input type="text" id="username" placeholder="Username" required />
 
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            required
-          />
-          <span id="togglePassword" class="eye">show</span>
-          <button type="submit">LOG IN</button>
+    <!-- PROFILE SECTION -->
+    <section class="profile-section">
+      <div class="profile-card">
+        <h2>MY PROFILE</h2>
+        <div class="underline"></div>
 
-          
-        </form>
-      </section>
+        <div class="profile-info">
+          <p><strong>Username:</strong> <span id="profileUsername"></span></p>
+          <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+          <p><strong>Password:</strong> <span id="password"></span></p>
+          <label for="favFighter">Favorite Fighter</label>
+          <input type="text" id="favFighter" placeholder="Enter fighter name" />
+          <button id="saveFighter">Save Fighter</button>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">LOG OUT</button>
+      </div>
     </section>
 
     <footer class="footer">
@@ -70,7 +68,7 @@
         written by hand
       </div>
     </footer>
+    <script src="profile.js"></script>
     <script src="app.js"></script>
-    <script src="login.js"></script>
   </body>
 </html>

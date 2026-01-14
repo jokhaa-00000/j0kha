@@ -59,3 +59,24 @@ if (rankingslink) {
   });
 }
 //
+// ===== LOGIN STATE CHECK =====
+document.addEventListener("DOMContentLoaded", () => {
+  const loginLink = document.getElementById("contact-link");
+  const profileLink = document.querySelector('a[href="profile.html"]');
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn === "true") {
+    // hide LOGIN
+    if (loginLink) loginLink.style.display = "none";
+
+    // show PROFILE
+    if (profileLink) profileLink.style.display = "block";
+  } else {
+    // show LOGIN
+    if (loginLink) loginLink.style.display = "block";
+
+    // hide PROFILE
+    if (profileLink) profileLink.style.display = "none";
+  }
+});

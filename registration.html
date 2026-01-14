@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER (reuse same header if you want) -->
+    <header class="header">
+      <div class="logo-section">
+        <span class="brand-bold">j0kh4as ™</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="#" class="nav-link active">REGISTER</a>
+      </nav>
+    </header>
+
+    <!-- REGISTER SECTION -->
+    <section class="register-section">
+      <form id="registerForm" class="register-card">
+        <h2>CREATE ACCOUNT</h2>
+        <div class="underline"></div>
+
+        <input type="text" id="regUsername" placeholder="Username" required />
+        <input type="email" id="regEmail" placeholder="Email" required />
+        <input
+          type="password"
+          id="regPassword"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="text"
+          id="regFighter"
+          placeholder="Favorite UFC Fighter"
+          required
+        />
+
+        <select id="regGender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">robot</option>
+        </select>
+
+        <button type="submit">REGISTER</button>
+
+        <p class="register-text">
+          Already have an account?
+          <button type="button" onclick="location.href='contact.html'">
+            Login
+          </button>
+        </p>
+      </form>
+    </section>
+
+    <script src="registation.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
