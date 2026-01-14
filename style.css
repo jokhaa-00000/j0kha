@@ -310,21 +310,6 @@ body {
   font-weight: bold;
 }
 
-.stat-box {
-  margin: 0 50px;
-}
-
-.stat-box h2 {
-  font-size: 80px;
-  color: #2c3e50;
-}
-
-.stat-box p {
-  font-size: 22px;
-  color: #2c3e50;
-  line-height: 1.4;
-}
-
 .divider {
   width: 2px;
   height: 100px;
